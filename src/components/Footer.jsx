@@ -13,7 +13,7 @@ const Footer = () => {
           {footer.map((foot) => {
             const { id, url, text } = foot;
             return (
-              <Link key={id} to={url}>
+              <Link key={id} to={url} className="hover:text-teal-600">
                 {text}
               </Link>
             );
