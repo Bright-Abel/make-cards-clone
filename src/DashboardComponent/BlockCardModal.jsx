@@ -13,10 +13,10 @@ const BlockCardModal = ({
       //   dispatch(blockCardSwitch()), dispatch(openModal());
       // }}
       className={`modal absolute top-0 left-0 w-full h-full bg-[rgba(18,27,25,0.63)]
-            z-[700 ] 
+            z-[700 ] flex items-center justify-center px-4 
           `}
     >
-      <div className="z-[1000] bg-white rounded-[12px] px-10 py-6 lg:px-8 pt-6 pb-10 mt-[3rem] mx-auto w-[40%]">
+      <div className="z-[1000] bg-white rounded-[12px] px-10 py-6 lg:px-8 pt-6 pb-10 mt-[3rem]  w-full sm:max-w-lg">
         <div className="flex justify-end">
           <button
             type="button"

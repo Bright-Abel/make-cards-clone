@@ -86,7 +86,7 @@ const OTPModal = () => {
           `}
     >
       <section
-        className="z-10 mx-auto rounded-md   bg-white py-6 lg:py-8 w-full sm:max-w-[29rem] px-8 relative overflow-hidden block"
+        className="z-10 mx-auto rounded-md  bg-white py-6 lg:py-8 w-full sm:max-w-[29rem] px-8 relative overflow-hidden block"
         style={{ boxShadow: 'rgba(0, 0, 0, 0.16) 0px 8px 16px' }}
       >
         <svg
@@ -160,7 +160,7 @@ const OTPModal = () => {
 
               <button
                 type="button"
-                className="!w-full bg-teal-600 text-md font-bold text-teal-50 py-3 px-20 rounded-[32px] grid place-content-center"
+                className="!w-full bg-teal-600 text-md font-bold whitespace-nowrap text-teal-50 py-3 px-20 rounded-[32px] grid place-content-center"
                 onClick={handleClick}
               >
                 Validate OTP
