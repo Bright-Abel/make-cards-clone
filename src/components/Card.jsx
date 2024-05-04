@@ -38,7 +38,7 @@ const Card = () => {
   };
   return (
     <Wrapper>
-      <main className=" relative w-full  container1  md:w-auto">
+      <main className=" relative w-full  anime md:w-auto">
         <div className="flex flex-col mx-auto lg:flex-row gap-y-4 gap-x-10 my-[3rem] md:my-0 md:mx-0">
           <Color />
 
@@ -116,9 +116,24 @@ const Card = () => {
 export default Card;
 
 const Wrapper = styled.main`
-  .container1 {
-    /* margin: 0 auto;
-    width: 100%; */
+  .anime {
+    animation: bounce 2s ease-in;
+  }
+  @keyframes bounce {
+    0%,
+    to {
+      -webkit-animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+      -webkit-transform: translateY(-20px);
+      transform: translateY(-20px);
+    }
+
+    50% {
+      -webkit-animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+      -webkit-transform: none;
+      transform: none;
+    }
   }
   .color-btn {
     border: 2px solid hsla(0, 0%, 100%, 0.5);
@@ -143,16 +158,6 @@ const Wrapper = styled.main`
     transition: none;
   }
 
-  .container {
-    /* width: 45px;
-    height: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 0.8rem;
-    border-radius: 50%;
-    border: 2px solid blue; */
-  }
   .colorInput {
     -webkit-appearance: none;
     -moz-appearance: none;

@@ -5,6 +5,7 @@ import './index.css';
 import { store } from './store.js';
 import { Provider } from 'react-redux';
 import 'react-color-palette/css';
+import 'aos/dist/aos.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <Provider store={store}>

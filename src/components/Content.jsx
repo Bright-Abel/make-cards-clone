@@ -4,6 +4,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import { handleChange } from '../features/contSlice';
 import TextTransition, { presets } from 'react-text-transition';
 import { useNavigate } from 'react-router-dom';
+// import AOS from 'aos';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const TEXTS = ['naira', 'rand', 'dollar', 'cedis', 'shilling'];
 
@@ -14,11 +17,21 @@ const Content = () => {
   );
   const navigate = useNavigate();
   useEffect(() => {
+    AOS.init({
+      disable: 'mobile',
+      duration: 1500,
+      easing: 'ease-in-sine',
+      anchorPlacement: 'center-bottom',
+    });
+
     const intervalId = setInterval(
       () => setIndex((index) => index + 1),
       3000 // every 3 seconds
     );
     return () => clearTimeout(intervalId);
+    // return () => {
+    //   AOS.refresh();
+    // };
   }, []);
 
   const dispatch = useDispatch();
@@ -36,10 +49,18 @@ const Content = () => {
 
   return (
     <div className="flex-col items-start flex max-w-[500px] lg:w-5/12 mx-auto lg:mx-0 ">
-      <h1 className="text-4xl leading-10 font-bold lg:text-5xl text-left">
+      <h1
+        className="text-4xl leading-10 font-bold lg:text-5xl text-left aos-init "
+        data-aos="fade-up"
+        data-aos-delay="400"
+      >
         Online payments made easy
       </h1>
-      <p className="text-lg w-full pt-4 leading-8 md:pb-7 lg:pr-10 lg:text-xl text-left">
+      <p
+        className="text-lg w-full pt-4 leading-8 md:pb-7 lg:pr-10 lg:text-xl text-left"
+        data-aos="zoom-in-right"
+        data-aos-delay="1200"
+      >
         Spend anytime, anywhere, with your
         <span className="bg-teal-500 px-2 py-1 rounded  capitalize font-semibold text-white mx-[.4rem]">
           <TextTransition springConfig={presets.wobbly} inline={true}>
