@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  :root {
+    --primary-50: #f0fdfa;
+    --primary-100: #ccfbf1;
+    --primary-200: #99f6e4;
+    --primary-300: #5eead4;
+    --primary-400: #2dd4bf;
+    --primary-500: #14b8a6;
+    --primary-600: #0d9488;
+    --primary-700: #0f766e;
+    --primary-800: #115e59;
+    --primary-900: #134e4a;
+
+    /* grey */
+    --grey-50: #ecfdf5;
+    --grey-100: #d9e2ec;
+    --grey-200: #bcccdc;
+    --grey-300: #9fb3c8;
+    --grey-400: #829ab1;
+    --grey-500: #627d98;
+    --grey-600: #486581;
+    --grey-700: #334e68;
+    --grey-800: #243b53;
+    --grey-900: #102a43;
+    /* rest of the colors */
+    --black: #222;
+    --white: #fff;
+    --red-light: #f8d7da;
+    --red-dark: #842029;
+    --green-light: #d1e7dd;
+    --green-dark: #0f5132;
+
+    /* fonts  */
+    --headingFont: 'Roboto Condensed', Sans-Serif;
+    --bodyFont: 'Cabin', Sans-Serif;
+    --small-text: 0.875rem;
+    --extra-small-text: 0.7em;
+    /* rest of the vars */
+    --backgroundColor: var(--grey-50);
+    --textColor: var(--grey-900);
+    --borderRadius: 0.25rem;
+    --letterSpacing: 1px;
+    --transition: 0.3s ease-in-out all;
+    --max-width: 1120px;
+    --fixed-width: 500px;
+    --fluid-width: 90vw;
+    --breakpoint-lg: 992px;
+    --nav-height: 6rem;
+    /* box shadow*/
+    --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  .align-element {
+    @apply mx-auto max-w-6xl px-8;
+  }
+  .sidebar {
+    @apply fixed top-0 left-0 xl:hidden bottom-0 w-[300px] z-[800] bg-stone-50 h-lvh ease-in-out duration-300 -translate-x-full;
+  }
+
+  .fundAside {
+    @apply fixed bottom-0 top-0 right-0 z-[800] bg-white w-[100%] sm:w-[80%] md:w-[50%] lg:w-[30%] h-lvh px-6 py-6 pt-6 pb-10 translate-x-full ease-in-out duration-[500ms];
+  }
+
+  .show-sidebar {
+    @apply translate-x-0;
+  }
+}

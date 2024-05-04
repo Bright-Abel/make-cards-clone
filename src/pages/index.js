@@ -1,0 +1,14 @@
+export { default as HomePage } from './HomePage';
+export { default as Landing } from './Landing';
+export { default as UseCases } from './UseCases';
+export { default as DevTools } from './DevTools';
+export { default as Faqs } from './Faqs';
+export { default as Login } from './Login';
+export { default as Pin } from './Pin';
+export { default as Business } from './Business';
+export { default as ResetPin } from './ResetPin';
+export { default as ForgotPin } from './ForgotPin';
+export { default as PrivacyPolicy } from './PrivacyPolicy';
+export { default as CookiePolicy } from './CookiePolicy';
+export { default as TermsOfService } from './TermsOfService';
+export { default as Register } from './Register';
