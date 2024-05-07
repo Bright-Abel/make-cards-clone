@@ -17,7 +17,7 @@ export const loader = (store) => () => {
   if (!nickName) {
     toast.error('You must input a nickname', {
       className:
-        'border border-red-300 bg-red-50 text-sm px-1 whitespace-nowrap mx-[4rem] my-[2rem] sm:mx-0 sm:my-0',
+        'border border-red-300 bg-red-50 text-sm px-1 rounded-lg whitespace-nowrap mx-[4rem] my-[2rem] ',
       hideProgressBar: true,
       closeButton: false,
     });
