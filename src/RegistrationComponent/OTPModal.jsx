@@ -57,19 +57,22 @@ const OTPModal = () => {
   const handleClick = () => {
     if (OTP.length < 6 && OTP.length > 0) {
       toast.error('The one time password must be up to 6.', {
-        className: 'border border-red-300 bg-red-50 text-sm px-1',
+        className:
+          'border border-red-300 mx-[4rem] bg-red-50 text-sm px-1 whitespace-nowrap my-[2rem]',
         hideProgressBar: true,
         closeButton: false,
       });
     } else if (OTP === '') {
       toast.error('The one time password field is require.', {
-        className: 'border border-red-300 bg-red-50 text-sm px-1',
+        className:
+          'border border-red-300  bg-red-50 text-sm px-1 whitespace-nowrap mx-[4rem] my-[2rem]',
         hideProgressBar: true,
         closeButton: false,
       });
     } else if (OTP !== '245678') {
       toast.error('USE "2-4-5-6-7-8" FOR THE OTP.', {
-        className: 'border border-red-300 bg-red-50 text-sm px-1 py-4',
+        className:
+          'border border-red-300 mx-[4rem] bg-red-50 text-sm px-1 py-4 whitespace-nowrap my-[2rem]',
         hideProgressBar: true,
         closeButton: false,
       });
@@ -85,7 +88,7 @@ const OTPModal = () => {
           `}
     >
       <section
-        className="z-10 mx-auto rounded-md  bg-white py-6 lg:py-8 w-full sm:max-w-[29rem] px-8 relative overflow-hidden block"
+        className="z-10 mx-auto rounded-md  bg-white  py-6 lg:py-8 w-full sm:max-w-[29rem] px-8 relative overflow-hidden block"
         style={{ boxShadow: 'rgba(0, 0, 0, 0.16) 0px 8px 16px' }}
       >
         <svg

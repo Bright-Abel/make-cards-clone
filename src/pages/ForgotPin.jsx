@@ -56,13 +56,15 @@ const ForgotPin = () => {
   const handleClick = () => {
     if (OTP.length < 6 && OTP.length > 0) {
       toast.error('The one time password must be up to 6.', {
-        className: 'border border-red-300 bg-red-50 text-sm px-1',
+        className:
+          'border border-red-300 bg-red-50 text-sm px-1 whitespace-nowrap mx-[4rem] my-[2rem]',
         hideProgressBar: true,
         closeButton: false,
       });
     } else if (OTP === '') {
       toast.error('The one time password field is require.', {
-        className: 'border border-red-300 bg-red-50 text-sm px-1',
+        className:
+          'border border-red-300 bg-red-50 text-sm px-1 whitespace-nowrap mx-[4rem] my-[2rem]',
         hideProgressBar: true,
         closeButton: false,
       });

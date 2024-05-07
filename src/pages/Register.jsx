@@ -15,8 +15,9 @@ import { useEffect } from 'react';
 export const loader = (store) => () => {
   const nickName = store.getState().contState.nickname;
   if (!nickName) {
-    toast.error('You must input your NickName', {
-      className: 'border border-red-300 bg-red-50 text-sm px-1',
+    toast.error('You must input a nickname', {
+      className:
+        'border border-red-300 bg-red-50 text-sm px-1 whitespace-nowrap mx-[4rem] my-[2rem] sm:mx-0 sm:my-0',
       hideProgressBar: true,
       closeButton: false,
     });

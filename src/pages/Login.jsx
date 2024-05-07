@@ -69,7 +69,6 @@ const Login = () => {
       setErrorMsg('Incorrect phone number');
     } else {
       setErrorMsg('');
-      return;
     }
     navigate('/pin');
   };
@@ -179,11 +178,7 @@ const Wrapper = styled.div`
     background-color: rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(0, 0, 0, 0.5);
   }
-  /* .PhoneInputCountryIconImg {
-    display: block;
-    height: 100%;
-    width: 100%;
-  } */
+
   .PhoneInputCountrySelectArrow {
     border-bottom-width: 2px;
     border-color: currentColor;
@@ -198,10 +193,5 @@ const Wrapper = styled.div`
     opacity: 0.45;
     transform: rotate(45deg);
     width: 0.45em;
-  }
-
-  .PhoneInputInput {
-    /* flex: 1;
-    min-width: 0; */
   }
 `;

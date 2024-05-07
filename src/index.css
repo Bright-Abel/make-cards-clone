@@ -74,3 +74,13 @@
     @apply translate-x-0;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .Toastify__toast-container {
+    top: 0;
+    right: auto;
+    bottom: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
