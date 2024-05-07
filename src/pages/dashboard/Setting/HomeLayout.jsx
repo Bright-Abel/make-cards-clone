@@ -26,14 +26,16 @@ const HomeLayout = () => {
       toast.error(
         'Reason for blocking your card must at least be greater than 5 letters',
         {
-          className: 'border border-red-300 bg-red-50 text-sm px-1',
+          className:
+            'border rounded-lg border-red-300 bg-red-50 text-sm px-1 mx-[4rem] my-[2rem]',
           hideProgressBar: true,
           closeButton: false,
         }
       );
     } else {
       toast.success('You Card has been successfully blocked', {
-        className: 'border border-teal-300 bg-teal-50 text-sm px-1',
+        className:
+          'border border-teal-300 bg-teal-50 rounded-lg text-sm px-1  mx-[4rem] my-[2rem]',
         hideProgressBar: true,
         closeButton: false,
       });
