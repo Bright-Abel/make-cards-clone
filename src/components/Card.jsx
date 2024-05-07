@@ -43,12 +43,12 @@ const Card = () => {
           <Color />
 
           {/* CARD BACKGROUND COLOR CHANGING BUTTON */}
-          <div className=" flex flex-row  items-center  gap-3 mx-auto lg:mx-0 lg:flex-col md:justify-between">
+          <div className=" flex   items-center  gap-3  lg:mx-0 lg:flex-col md:justify-between">
             {colors.map((col, index) => {
               return (
                 <div
                   key={index}
-                  className={`${color === col ? 'container ' : null}`}
+                  // className={`${color === col ? 'container ' : null}`}
                 >
                   <div
                     href="#"
@@ -156,6 +156,7 @@ const Wrapper = styled.main`
     border: 2px solid #fff;
     box-shadow: 0 0 0 2px #05f;
     transition: none;
+    width: calc(2.9rem - 2px);
   }
 
   .colorInput {

@@ -2,7 +2,7 @@ import { HiOutlineArrowLeft } from 'react-icons/hi';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import PinInput from 'react-pin-input';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import SubmitBtn from './SubmitBtn';
 import { toast } from 'react-toastify';
 import { handleColor } from '../features/contSlice';
@@ -50,11 +50,10 @@ const OTPModal = () => {
   const minutes = Math.floor(time / 60);
   const seconds = time % 60;
 
-  const handleChange = (value) => {
+  const handleChange = useCallback((value) => {
     const name = 'OTP';
-
     dispatch(handleColor({ name, value }));
-  };
+  }, []);
   const handleClick = () => {
     if (OTP.length < 6 && OTP.length > 0) {
       toast.error('The one time password must be up to 6.', {

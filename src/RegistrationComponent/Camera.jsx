@@ -50,6 +50,8 @@ const Camera = () => {
 
   const videoConstraints = {
     width: 200,
+
+    borderRadius: '50%',
     height: 200,
     facingMode: 'user',
   };
@@ -100,7 +102,8 @@ const Camera = () => {
                     screenshotFormat="image/jpeg"
                     width={200}
                     videoConstraints={videoConstraints}
-                    style={{ borderRadius: '50%' }}
+                    className="img"
+                    // style={{ borderRadius: '50%' }}
                   />
                 </div>
 
@@ -115,7 +118,7 @@ const Camera = () => {
             ) : (
               <>
                 <div className="camera-container mt-10">
-                  <img src={camera} alt="" style={{ borderRadius: '50%' }} />
+                  <img src={camera} alt="" className="img" />
                 </div>
 
                 <div className="flex  gap-4 font-bold items-center">
@@ -178,10 +181,10 @@ export default Camera;
 const Wrapper = styled.section`
   .camera-container {
     position: relative;
-    display: inline-block;
+    /* display: inline-block; */
     height: 210px;
-    display: grid;
-    place-content: center;
+    /* display: flex; */
+
     width: 210px;
     border-radius: 50%;
     padding: 10px;
@@ -198,6 +201,13 @@ const Wrapper = styled.section`
     width: 20rem;
     height: 20rem;
     border-radius: 100%;
+  }
+
+  .img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
   }
 
   input[type='number']::-webkit-inner-spin-button,

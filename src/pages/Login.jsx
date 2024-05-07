@@ -49,26 +49,27 @@ const Login = () => {
       setErrorMsg('Incorrect phone number');
     } else if (
       countryName === 'KE' &&
-      !phoneNumber.match(/^(\+?254|0)([7][0-9]\\d{7})$/)
+      !phoneNumber.match(/^(\+?254|0)([7][0-9]\d{7})$/)
     ) {
       setErrorMsg('Incorrect phone number');
     } else if (
       countryName === 'UG' &&
-      !phoneNumber.match(/^(\+?256|0)(\\d{9})$/)
+      !phoneNumber.match(/^(\+?256|0)(\d{9})$/)
     ) {
       setErrorMsg('Incorrect phone number');
     } else if (
       countryName === 'GH' &&
-      !phoneNumber.match(/^(\+?233|0)(\\d{9})$/)
+      !phoneNumber.match(/^(\+?233|0)(\d{9})$/)
     ) {
       setErrorMsg('Incorrect phone number');
     } else if (
       countryName === 'ZA' &&
-      !phoneNumber.match(/^(\+?27|0)(\\d{9})$/)
+      !phoneNumber.match(/^(\+?27|0)(\d{9})$/)
     ) {
       setErrorMsg('Incorrect phone number');
     } else {
       setErrorMsg('');
+      return;
     }
     navigate('/pin');
   };

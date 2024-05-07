@@ -19,8 +19,8 @@ const Content = () => {
   useEffect(() => {
     AOS.init({
       disable: 'mobile',
-      duration: 1500,
-      easing: 'ease-in-sine',
+      duration: 1200,
+      // easing: 'ease-in-sine',
       anchorPlacement: 'center-bottom',
     });
 

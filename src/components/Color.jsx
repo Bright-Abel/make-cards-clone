@@ -75,9 +75,9 @@ const Color = () => {
               <p className="  bottom-4 absolute  left-2   max-w-[308px] calibri tracking-widest text-[12px] sm:text-sm uppercase font-medium text-white">
                 {nickname === ''
                   ? "cardholder's name"
-                  : nickname.length <= 28
+                  : nickname.length <= 18
                   ? nickname
-                  : nickname.substring(0, 28) + '...'}
+                  : nickname.substring(0, 18) + '...'}
               </p>
 
               {/* <p className="">visa</p> */}

@@ -119,8 +119,7 @@ const FundCardForm = ({ viewID }) => {
             <FundSlide />
             <Link
               to="/dashboard"
-              className="!w-full bg-teal-600 text-sm mt-8 font-bold text-teal-50 py-3 px-20 rounded-[32px] grid place-content-center"
-              type="button"
+              className="!w-full bg-teal-600 text-sm mt-8 font-bold text-teal-50 py-4 sm:py-3 px-20 rounded-[32px] grid place-content-center whitespace-nowrap"
             >
               Skip and continue to dashboard
             </Link>

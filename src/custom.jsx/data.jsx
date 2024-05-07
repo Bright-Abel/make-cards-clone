@@ -61,9 +61,9 @@ export const settingLink = [
 ];
 
 export const footer = [
-  { id: 1, url: 'terms-of-service', text: 'Terms of service' },
-  { id: 2, url: 'privacy-policy', text: 'Privacy Policy' },
-  { id: 3, url: 'cookie-policy', text: 'Cookie Policy' },
+  { id: 1, url: '/terms-of-service', text: 'Terms of service' },
+  { id: 2, url: '/privacy-policy', text: 'Privacy Policy' },
+  { id: 3, url: '/cookie-policy', text: 'Cookie Policy' },
 ];
 
 export const colors = ['#227668', '#011c7c', '#25292e'];
