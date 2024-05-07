@@ -8,6 +8,7 @@ import { AnimatePresence } from 'framer-motion';
 
 const HomePage = () => {
   const navigation = useNavigation();
+  console.log(navigation.state);
   const isPageLoading = navigation.state === 'loading';
   const dispatch = useDispatch();
   const location = useLocation();

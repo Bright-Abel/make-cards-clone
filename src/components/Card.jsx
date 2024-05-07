@@ -156,7 +156,6 @@ const Wrapper = styled.main`
     border: 2px solid #fff;
     box-shadow: 0 0 0 2px #05f;
     transition: none;
-    width: calc(2.9rem - 2px);
   }
 
   .colorInput {

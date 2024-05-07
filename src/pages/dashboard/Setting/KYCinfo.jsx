@@ -106,7 +106,7 @@ const KYCinfo = () => {
         </button>
       ) : null}
 
-      {displayKYCInfo ? (
+      {/* {displayKYCInfo ? (
         id === 1 ? (
           <UserPersonalInfo />
         ) : id === 2 ? (
@@ -114,6 +114,13 @@ const KYCinfo = () => {
         ) : id === 3 ? (
           <ProofOfAddress />
         ) : null
+      ) : null} */}
+      {displayKYCInfo && id === 1 ? (
+        <UserPersonalInfo />
+      ) : displayKYCInfo && id === 2 ? (
+        <MeansOfIdentity />
+      ) : displayKYCInfo && id === 3 ? (
+        <ProofOfAddress />
       ) : null}
     </main>
   );
