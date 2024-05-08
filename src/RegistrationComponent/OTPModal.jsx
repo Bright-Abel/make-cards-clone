@@ -170,8 +170,9 @@ const OTPModal = () => {
             </div>
           </div>
 
-          <p className="text-center text-sm pt-2">
-            Not getting OTP?
+          <div className="flex justify-center z-[800] text-sm pt-2">
+            <p>Not getting OTP?</p>
+
             {time > 0 ? (
               <span className="ml-2 text-teal-500 font-semibold  ">
                 {minutes < 1 && seconds > 10
@@ -184,12 +185,13 @@ const OTPModal = () => {
               <button
                 type="button"
                 onClick={startTimer}
-                className="ml-2 text-teal-500 font-semibold cursor-pointer"
+                // onTouchStart={startTimer}
+                className="ml-2 text-teal-500 font-semibold cursor-pointer z-[800]"
               >
                 Resend
               </button>
             )}
-          </p>
+          </div>
         </div>
       </section>
     </div>
