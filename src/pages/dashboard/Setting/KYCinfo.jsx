@@ -33,7 +33,7 @@ const KYCinfo = () => {
     };
 
     // Call the function initially and add event listener for window resize
-    // updateWidths();
+    updateWidths();
     // window.addEventListener('resize', updateWidths);
 
     // Remove event listener on component unmount
