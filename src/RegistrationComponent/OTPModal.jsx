@@ -175,7 +175,7 @@ const OTPModal = () => {
 
             {time > 0 ? (
               <span className="ml-2 text-teal-500 font-semibold  ">
-                {minutes < 1 && seconds > 10
+                {minutes < 1 && seconds > 9
                   ? `0${minutes} : ${seconds}`
                   : minutes < 1 && seconds < 10
                   ? `0${minutes} : 0${seconds}`
