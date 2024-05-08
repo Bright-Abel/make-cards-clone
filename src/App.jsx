@@ -48,54 +48,54 @@ const router = createBrowserRouter([
         element: <Landing />,
       },
       {
-        path: 'usecases',
+        path: '/usecases',
         element: <UseCases />,
         // errorElement: <ErrorElement />,
       },
       {
-        path: 'faqs',
+        path: '/faqs',
         element: <Faqs />,
         // errorElement: <ErrorElement />,
       },
       {
-        path: 'devtools',
+        path: '/devtools',
         element: <DevTools />,
       },
       {
-        path: 'login',
+        path: '/login',
         element: <Login />,
       },
       {
-        path: 'business',
+        path: '/business',
         element: <Business />,
       },
       {
-        path: 'pin',
+        path: '/pin',
         element: <Pin />,
       },
       {
-        path: 'forgot-pin',
+        path: '/forgot-pin',
         element: <ForgotPin />,
       },
       {
-        path: 'reset-pin',
+        path: '/reset-pin',
         element: <ResetPin />,
       },
       {
-        path: 'register',
+        path: '/register',
         element: <Register />,
         loader: registerLoader(store),
       },
       {
-        path: 'privacy-policy',
+        path: '/privacy-policy',
         element: <PrivacyPolicy />,
       },
       {
-        path: 'cookie-policy',
+        path: '/cookie-policy',
         element: <CookiePolicy />,
       },
       {
-        path: 'terms-of-service',
+        path: '/terms-of-service',
         element: <TermsOfService />,
       },
     ],
