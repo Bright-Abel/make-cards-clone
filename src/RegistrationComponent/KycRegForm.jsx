@@ -62,7 +62,7 @@ const KycRegForm = ({ isModalOpen, viewID }) => {
     dispatch(modalHandler());
     toast.success('Use "2-4-5-6-7-8" for the OTP.', {
       className:
-        'border border-teal-500 bg-teal-50 text-sm px-1 py-2 whitespace-nowrap rounded-lg mx-[4rem] my-[2rem]',
+        'border border-teal-500 bg-teal-50 text-sm px-1  rounded-lg mx-[4rem] my-[2rem] sm:mx-0',
       hideProgressBar: true,
       closeButton: false,
     });

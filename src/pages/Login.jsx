@@ -2,9 +2,9 @@ import { country } from '../custom.jsx/data';
 import styled from 'styled-components';
 import { handleColor } from '../features/contSlice';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, useNavigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+
 import { Footer, FormSelectInput, Navbar } from '../components';
 import { motion } from 'framer-motion';
 const Login = () => {

@@ -28,7 +28,8 @@ const ResetPin = () => {
   const handleClick = () => {
     if (changePin !== confirmChangePin) {
       toast.error('New PIN and confirm PIN must be the same.', {
-        className: 'border border-red-300 bg-red-50 text-sm px-1',
+        className:
+          'border border-red-300 bg-red-50 text-sm px-1 rounded-lg mx-[4rem] my-[2rem] sm:mx-0',
         hideProgressBar: true,
         closeButton: false,
       });

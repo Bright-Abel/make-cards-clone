@@ -31,6 +31,7 @@ const ForgotPin = () => {
 
   // Restart Timer
   const startTimer = () => {
+    // console.log('WHAT IS THE TIME');
     clearInterval(timerRef.current); // Clear the previous timer
     setTime(60); // Reset time to 60
     timerRef.current = setInterval(() => {
@@ -57,14 +58,14 @@ const ForgotPin = () => {
     if (OTP.length < 6 && OTP.length > 0) {
       toast.error('The one time password must be up to 6.', {
         className:
-          'border border-red-300 bg-red-50 text-sm px-1 whitespace-nowrap mx-[4rem] my-[2rem]',
+          'border border-red-300 bg-red-50 text-sm px-1  rounded-lg mx-[4rem] my-[2rem] sm:mx-0',
         hideProgressBar: true,
         closeButton: false,
       });
     } else if (OTP === '') {
       toast.error('The one time password field is require.', {
         className:
-          'border border-red-300 bg-red-50 text-sm px-1 whitespace-nowrap mx-[4rem] my-[2rem]',
+          'border border-red-300 bg-red-50 text-sm px-2 rounded-lg mx-[4rem] my-[2rem] sm:mx-0',
         hideProgressBar: true,
         closeButton: false,
       });
@@ -79,7 +80,7 @@ const ForgotPin = () => {
 
       <Wrapper>
         <motion.div
-          className="relative flex items-center justify-center w-full gap-4 p-4 xl:!py-[5rem]"
+          className="relative flex items-center justify-center w-full gap-4 p-4 xl:!py-[5rem] "
           initial={{ transform: 'translateX(100%)' }}
           animate={{
             transform: 'translateX(0%)',
@@ -155,7 +156,7 @@ const ForgotPin = () => {
               >
                 Submit
               </button>
-              <p className="text-center text-sm pt-2">
+              <span className="text-center text-sm pt-2">
                 Not getting OTP?
                 {time > 0 ? (
                   <span className="ml-2 text-teal-500 font-semibold  ">
@@ -169,12 +170,12 @@ const ForgotPin = () => {
                   <button
                     type="button"
                     onClick={startTimer}
-                    className="ml-2 text-teal-500 font-semibold"
+                    className="ml-2 text-teal-500 font-semibold cursor-pointer"
                   >
                     Resend
                   </button>
                 )}
-              </p>
+              </span>
             </div>
           </div>
         </motion.div>

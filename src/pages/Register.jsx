@@ -1,4 +1,4 @@
-import { Outlet, useNavigation, useLocation } from 'react-router-dom';
+// import { Outlet, useNavigation, useLocation } from 'react-router-dom';
 import { RegisterNavBar, Footer, Loading } from '../components';
 import {
   CreatePin,
@@ -17,7 +17,7 @@ export const loader = (store) => () => {
   if (!nickName) {
     toast.error('You must input a nickname', {
       className:
-        'border border-red-300 bg-red-50 text-sm px-1 rounded-lg whitespace-nowrap mx-[4rem] my-[2rem] ',
+        'border border-red-300 bg-red-50 text-sm px-1 rounded-lg mx-[4rem] my-[2rem] sm:mx-0',
       hideProgressBar: true,
       closeButton: false,
     });

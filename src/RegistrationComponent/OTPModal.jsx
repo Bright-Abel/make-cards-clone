@@ -58,21 +58,21 @@ const OTPModal = () => {
     if (OTP.length < 6 && OTP.length > 0) {
       toast.error('The one time password must be up to 6.', {
         className:
-          'border border-red-300 mx-[4rem] bg-red-50 text-sm px-1 rounded-lg  my-[2rem]',
+          'border border-red-300 bg-red-50 text-sm px-1 rounded-lg mx-[4rem] my-[2rem] sm:mx-0',
         hideProgressBar: true,
         closeButton: false,
       });
     } else if (OTP === '') {
       toast.error('The one time password field is require.', {
         className:
-          'border border-red-300  bg-red-50 text-sm px-1 whitespace-nowrap rounded-lg mx-[4rem] my-[2rem]',
+          'border border-red-300  bg-red-50 text-sm px-1 rounded-lg mx-[4rem] my-[2rem] sm:mx-0',
         hideProgressBar: true,
         closeButton: false,
       });
     } else if (OTP !== '245678') {
       toast.error('USE "2-4-5-6-7-8" FOR THE OTP.', {
         className:
-          'border border-red-300  bg-red-50 text-sm px-1 py-4 rounded-lg whitespace-nowrap my-[2rem] mx-[4rem]',
+          'border border-red-300  bg-red-50 text-sm px-1 py-4 rounded-lg mx-[4rem] my-[2rem] sm:mx-0',
         hideProgressBar: true,
         closeButton: false,
       });
@@ -184,7 +184,7 @@ const OTPModal = () => {
               <button
                 type="button"
                 onClick={startTimer}
-                className="ml-2 text-teal-500 font-semibold"
+                className="ml-2 text-teal-500 font-semibold cursor-pointer"
               >
                 Resend
               </button>

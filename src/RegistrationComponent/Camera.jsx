@@ -39,7 +39,7 @@ const Camera = () => {
     if (!selectedOption || !BVN) {
       toast.error('Please select valid means of identification.', {
         className:
-          'border border-red-300 bg-red-50 text-xs text-black px-1 font-bold whitespace-nowrap mx-[4rem]',
+          'border border-red-300 bg-red-50 text-xs text-black px-1 font-bold rounded-lg mx-[4rem] my-[2rem] sm:mx-0',
         hideProgressBar: true,
         closeButton: false,
       });
