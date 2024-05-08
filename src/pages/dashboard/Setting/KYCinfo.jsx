@@ -33,13 +33,13 @@ const KYCinfo = () => {
     };
 
     // Call the function initially and add event listener for window resize
-    updateWidths();
-    window.addEventListener('resize', updateWidths);
+    // updateWidths();
+    // window.addEventListener('resize', updateWidths);
 
     // Remove event listener on component unmount
-    return () => {
-      window.removeEventListener('resize', updateWidths);
-    };
+    // return () => {
+    //   window.removeEventListener('resize', updateWidths);
+    // };
   }, []);
   return (
     <main className="lg:flex gap-8 lg:flex-row ">
