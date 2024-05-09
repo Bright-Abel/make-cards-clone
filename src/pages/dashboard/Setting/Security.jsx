@@ -34,12 +34,6 @@ const Security = () => {
 
     // Call the function initially and add event listener for window resize
     updateWidths();
-    window.addEventListener('resize', updateWidths);
-
-    // Remove event listener on component unmount
-    return () => {
-      window.removeEventListener('resize', updateWidths);
-    };
   }, []);
   return (
     <main className="flex flex-col gap-x-8 gap-y-6 lg:flex-row relative">
