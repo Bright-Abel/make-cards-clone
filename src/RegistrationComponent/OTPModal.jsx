@@ -33,6 +33,12 @@ const OTPModal = () => {
 
   // Restart Timer
   const startTimer = () => {
+    toast.success('USE "2-4-5-6-7-8" FOR THE OTP.', {
+      className:
+        'border border-teal-500  bg-teal-50 text-sm px-1 py-4 rounded-lg mx-[4rem] my-[2rem] sm:mx-0',
+      hideProgressBar: true,
+      closeButton: false,
+    });
     clearInterval(timerRef.current); // Clear the previous timer
     setTime(60); // Reset time to 60
     timerRef.current = setInterval(() => {
