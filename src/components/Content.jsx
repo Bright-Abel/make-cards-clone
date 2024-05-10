@@ -18,7 +18,6 @@ const Content = () => {
   const navigate = useNavigate();
   useEffect(() => {
     AOS.init({
-      disable: 'mobile',
       duration: 1200,
       // easing: 'ease-in-sine',
       anchorPlacement: 'center-bottom',
