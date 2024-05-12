@@ -87,7 +87,7 @@ const Wrapper = styled.section`
   .progress-steps .step {
     cursor: pointer;
     display: grid;
-    font-size: 12px;
+    font-size: 13px;
     grid-template-columns: repeat(1, minmax(0, 1fr));
     grid-template-columns: auto;
     grid-template-rows: repeat(2, minmax(0, 1fr));
@@ -124,7 +124,7 @@ const Wrapper = styled.section`
 
   .progress-steps .step:before {
     color: #a6adba;
-    height: 0.25rem;
+    height: 0.186rem;
     margin-left: -100%;
     top: 0;
     width: 100%;

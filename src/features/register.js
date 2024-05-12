@@ -18,6 +18,7 @@ const register = createSlice({
     changeView: (state, { payload }) => {
       state.viewID = payload;
       state.arrayID = [...state.arrayID, payload];
+      // let dataToRemove =
     },
     modalHandler: (state) => {
       state.isModalOpen = !state.isModalOpen;
@@ -34,6 +35,15 @@ const register = createSlice({
     handleVerificationID: (state, { payload }) => {
       state.verificationID = payload;
     },
+    removeDataFromArray: (state, { payload }) => {
+      if (payload >= 0 && payload < state.arrayID.length - 1) {
+        state.arrayID = state.arrayID.filter(
+          (item, index) => item !== payload + 1
+        );
+      } else if (payload === state.arrayID.length - 1) {
+        state.arrayID.pop(); // Remove the last item if payload is the index of the last item
+      }
+    },
   },
 });
 
@@ -44,5 +54,6 @@ export const {
   handleCamera,
   handleUserInput,
   handleVerificationID,
+  removeDataFromArray,
 } = register.actions;
 export default register.reducer;

@@ -10,7 +10,7 @@ export const loader = (store) => () => {
   const phoneNumber = store.getState().contState.phoneNumber;
   const pin = store.getState().contState.pin;
 
-  if (!phoneNumber || !pin) {
+  if (!phoneNumber && !pin) {
     toast.error(
       'You must login or create an account before you can access the dashboard',
       {

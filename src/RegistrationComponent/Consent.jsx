@@ -4,6 +4,7 @@ import {
   handleInput,
   changeView,
   handleVerificationID,
+  removeDataFromArray,
 } from '../features/register';
 const Consent = () => {
   const { consent } = useSelector((store) => store.registerSlice);
@@ -54,7 +55,10 @@ const Consent = () => {
 
             <button
               type="button"
-              onClick={() => dispatch(changeView(1))}
+              onClick={() => {
+                dispatch(changeView(1));
+                dispatch(removeDataFromArray(1));
+              }}
               className={`flex items-center justify-center gap-2 text-teal-500 text-sm `}
             >
               <HiOutlineArrowLeft /> Back
