@@ -26,10 +26,12 @@ const RegisterNavBar = () => {
               return (
                 <li
                   key={id}
-                  className={`step  after:!w-0 after:!h-0 ${
+                  className={`step   ${
+                    arrayID.includes(index + 1) ? 'step-primary' : null
+                  } ${
                     index + 1 === viewID
-                      ? 'step-primary  !text-black active-step'
-                      : null
+                      ? ' !text-black active-step'
+                      : 'after:!w-0 after:!h-0'
                   }`}
                 >
                   {text}
@@ -61,14 +63,6 @@ const RegisterNavBar = () => {
 };
 export default RegisterNavBar;
 const Wrapper = styled.section`
-  .container {
-    margin: 0 auto;
-    max-width: 80rem;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-    width: 100%;
-  }
-
   .progress-steps {
     counter-reset: step;
     display: inline-grid;
@@ -148,6 +142,7 @@ const Wrapper = styled.section`
       grid-column-start: 1;
       grid-row-start: 1;
       height: 11px;
+
       position: relative;
       width: 11px;
       z-index: 1;

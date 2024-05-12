@@ -8,7 +8,7 @@ const initialState = {
   camera: null,
   BVN: '',
   verificationID: 1,
-  arrayID: [],
+  arrayID: [1],
 };
 
 const register = createSlice({
@@ -17,7 +17,7 @@ const register = createSlice({
   reducers: {
     changeView: (state, { payload }) => {
       state.viewID = payload;
-      state.arrayID.push(payload);
+      state.arrayID = [...state.arrayID, payload];
     },
     modalHandler: (state) => {
       state.isModalOpen = !state.isModalOpen;
