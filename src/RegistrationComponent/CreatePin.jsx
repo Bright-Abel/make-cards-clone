@@ -102,7 +102,7 @@ const CreatePin = ({ viewID }) => {
               // secretDelay={100}
               onChange={(value, index) => handleChangePin(value)}
               type="tel"
-              inputMode="number"
+              inputMode="tel"
               pattern="[0-9]*"
               inputStyle={{
                 borderTop: 'none',

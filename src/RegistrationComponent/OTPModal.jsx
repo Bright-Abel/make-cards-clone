@@ -148,8 +148,8 @@ const OTPModal = () => {
                 placeholder="•"
                 secret
                 onChange={(value, index) => handleChange(value)}
-                type="numeric"
-                inputMode="number"
+                type="tel"
+                inputMode="tel"
                 inputStyle={{
                   borderColor: '#d1d5db',
                   width: '2.2rem',
