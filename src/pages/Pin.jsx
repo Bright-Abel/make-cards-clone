@@ -90,8 +90,8 @@ const Pin = () => {
                   secret
                   // secretDelay={100}
                   onChange={(value, index) => handleChange(value)}
-                  type="numeric"
-                  inputMode="number"
+                  type="tel"
+                  inputMode="tel"
                   style={{
                     padding: '10px',
                     whiteSpace: 'nowrap',

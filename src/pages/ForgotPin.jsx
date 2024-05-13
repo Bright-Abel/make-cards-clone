@@ -132,8 +132,8 @@ const ForgotPin = () => {
                   secret
                   // secretDelay={100}
                   onChange={(value, index) => handleChange(value)}
-                  type="numeric"
-                  inputMode="number"
+                  type="tel"
+                  inputMode="tel"
                   // style={{ padding: '10px' }}
                   inputStyle={{
                     borderColor: '#d1d5db',

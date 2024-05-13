@@ -99,8 +99,8 @@ const ResetPin = () => {
                   secret
                   // secretDelay={100}
                   onChange={(value, index) => handleChangePin(value)}
-                  type="numeric"
-                  inputMode="number"
+                  type="tel"
+                  inputMode="tel"
                   inputStyle={{
                     borderTop: 'none',
                     borderLeft: 'none',
@@ -124,8 +124,8 @@ const ResetPin = () => {
                   secret
                   // secretDelay={100}
                   onChange={(value, index) => handleConfirmChangePin(value)}
-                  type="numeric"
-                  inputMode="number"
+                  type="tel"
+                  inputMode="tel"
                   inputStyle={{
                     borderTop: 'none',
                     borderLeft: 'none',
