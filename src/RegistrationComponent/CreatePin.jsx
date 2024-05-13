@@ -12,12 +12,6 @@ const CreatePin = ({ viewID }) => {
   const [message, setMessage] = useState('');
   const [isVisible, setIsVisible] = useState(false);
 
-  const [inputMode, setInputMode] = useState('text'); // Initial input mode
-
-  const handleFocus = () => {
-    setInputMode('numeric'); // Change input mode to numeric when focused
-  };
-
   // Function to hide the error message after 3 seconds
   useEffect(() => {
     if (message) {
@@ -107,10 +101,9 @@ const CreatePin = ({ viewID }) => {
               secret
               // secretDelay={100}
               onChange={(value, index) => handleChangePin(value)}
-              type="numeric"
-              // inputMode="number"
-              inputMode={inputMode} // Set inputMode dynamically
-              onFocus={handleFocus}
+              type="tel"
+              inputMode="number"
+              pattern="[0-9]*"
               inputStyle={{
                 borderTop: 'none',
                 borderLeft: 'none',
