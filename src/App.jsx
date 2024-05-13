@@ -37,7 +37,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import { store } from './store';
 import { loader as registerLoader } from './pages/Register';
-import { loader as dashboardLoader } from './pages/dashboard/SharedLayout';
+// import { loader as dashboardLoader } from './pages/dashboard/SharedLayout';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -106,7 +106,7 @@ const router = createBrowserRouter([
   {
     path: '/dashboard',
     element: <SharedLayout />,
-    loader: dashboardLoader(store),
+    // loader: dashboardLoader(store),
     children: [
       {
         index: true,

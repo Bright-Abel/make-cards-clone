@@ -6,29 +6,29 @@ import { useSelector, useDispatch } from 'react-redux';
 import { FundCardAside } from '../../DashboardComponent';
 import { redirect } from 'react-router-dom';
 
-export const loader = (store) => () => {
-  const phoneNumber = store.getState().contState.phoneNumber;
-  const pin = store.getState().contState.pin;
+// export const loader = (store) => () => {
+//   const phoneNumber = store.getState().contState.phoneNumber;
+//   const pin = store.getState().contState.pin;
 
-  if (!phoneNumber && !pin) {
-    toast.error(
-      'You must login or create an account before you can access the dashboard',
-      {
-        className:
-          'border border-red-300 bg-red-50 text-sm px-1 rounded-lg mx-[2rem] my-[2rem] sm:mx-0',
-        hideProgressBar: true,
-        closeButton: false,
-      }
-    );
-    return redirect('/');
-  }
+//   if (!phoneNumber && !pin) {
+//     toast.error(
+//       'You must login or create an account before you can access the dashboard',
+//       {
+//         className:
+//           'border border-red-300 bg-red-50 text-sm px-1 rounded-lg mx-[2rem] my-[2rem] sm:mx-0',
+//         hideProgressBar: true,
+//         closeButton: false,
+//       }
+//     );
+//     return redirect('/');
+//   }
 
-  return null;
-};
+//   return null;
+// };
 
 const SharedLayout = () => {
   const { fundCardAside } = useSelector((store) => store.dashSlice);
-  console.log(fundCardAside);
+
   return (
     <Wrapper>
       <SmallScreenSideBar />

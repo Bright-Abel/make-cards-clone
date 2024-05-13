@@ -20,27 +20,7 @@ const RegisterNavBar = () => {
             />
           </NavLink>
 
-          <ul className="w-full progress-steps lg:w-auto">
-            {registerNavLink.map((link, index) => {
-              const { id, text } = link;
-              return (
-                <li
-                  key={id}
-                  className={`step   ${
-                    arrayID.includes(index + 1) ? 'step-primary' : null
-                  } ${
-                    index + 1 === viewID
-                      ? ' !text-black active-step'
-                      : 'after:!w-0 after:!h-0'
-                  }`}
-                >
-                  {text}
-                </li>
-              );
-            })}
-          </ul>
-
-          <div className={`text-teal-600 flex items-center`}>
+          <div className={`text-teal-600 flex items-center lg:order-2`}>
             <NavLink
               onClick={() => dispatch(loginCont(false))}
               to="/login"
@@ -56,6 +36,34 @@ const RegisterNavBar = () => {
               Business
             </NavLink>
           </div>
+
+          <ul className="w-full progress-steps lg:w-auto pt-4 md:pt-2 lg:pt-0">
+            {registerNavLink.map((link, index) => {
+              const { id, text } = link;
+              return (
+                <li
+                  key={id}
+                  className={`step ${
+                    arrayID.includes(index + 1) ? 'step-primary' : null
+                  } ${
+                    index + 1 === viewID
+                      ? ' !text-black active-step  '
+                      : 'after:!w-0 after:!h-0 '
+                  }`}
+                >
+                  <span
+                    className={`${
+                      arrayID.indexOf(index + 1) === arrayID.length - 1
+                        ? 'opacity-100  md:opacity-100'
+                        : 'opacity-0 md:opacity-100 '
+                    }`}
+                  >
+                    {text}
+                  </span>
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </nav>
     </Wrapper>
@@ -87,7 +95,7 @@ const Wrapper = styled.section`
   .progress-steps .step {
     cursor: pointer;
     display: grid;
-    font-size: 13px;
+    font-size: 11px;
     grid-template-columns: repeat(1, minmax(0, 1fr));
     grid-template-columns: auto;
     grid-template-rows: repeat(2, minmax(0, 1fr));
@@ -96,10 +104,14 @@ const Wrapper = styled.section`
     place-items: center;
     text-align: center;
   }
-
+  /* 
   .progress-steps .step.active-step {
     min-width: 7rem !important;
-  }
+  } */
+
+  /* .el {
+    color: rgba(0, 0, 0, 0.5);
+  } */
 
   .progress-steps .step:after {
     border-radius: 9999px;
@@ -142,7 +154,6 @@ const Wrapper = styled.section`
       grid-column-start: 1;
       grid-row-start: 1;
       height: 11px;
-
       position: relative;
       width: 11px;
       z-index: 1;

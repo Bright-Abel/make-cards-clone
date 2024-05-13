@@ -5,13 +5,13 @@ import { handleColor } from '../features/contSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
 import Input from '../DashboardComponent/Input';
-import { modalHandler } from '../features/register';
+import { modalHandler, changeView } from '../features/register';
 import OTPModal from './OTPModal';
 import SubmitBtn from './SubmitBtn';
 import { toast } from 'react-toastify';
 
 const KycRegForm = ({ isModalOpen, viewID }) => {
-  const { phoneNumber, countryName, email, nickname } = useSelector(
+  const { phoneNumber, countryName, email, nickname, OTP } = useSelector(
     (store) => store.contState
   );
   const dispatch = useDispatch();
@@ -31,41 +31,17 @@ const KycRegForm = ({ isModalOpen, viewID }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (
-      countryName === 'NG' &&
-      !phoneNumber.match(/^(\+?234|0)([789][01]\d{8}|[579]\d{8})$/)
-    ) {
-      setErrorMsg('Incorrect phone number');
-    } else if (
-      countryName === 'KE' &&
-      !phoneNumber.match(/^(\+?254|0)([7][0-9]\\d{7})$/)
-    ) {
-      setErrorMsg('Incorrect phone number');
-    } else if (
-      countryName === 'UG' &&
-      !phoneNumber.match(/^(\+?256|0)(\\d{9})$/)
-    ) {
-      setErrorMsg('Incorrect phone number');
-    } else if (
-      countryName === 'GH' &&
-      !phoneNumber.match(/^(\+?233|0)(\\d{9})$/)
-    ) {
-      setErrorMsg('Incorrect phone number');
-    } else if (
-      countryName === 'ZA' &&
-      !phoneNumber.match(/^(\+?27|0)(\\d{9})$/)
-    ) {
-      setErrorMsg('Incorrect phone number');
+    if (OTP.length === 6) {
+      dispatch(changeView(2));
     } else {
-      setErrorMsg('');
+      dispatch(modalHandler());
+      toast.success('Use "2-4-5-6-7-8" for the OTP.', {
+        className:
+          'border border-teal-500 bg-teal-50 text-sm px-1  rounded-lg mx-[4rem] my-[2rem] sm:mx-0',
+        hideProgressBar: true,
+        closeButton: false,
+      });
     }
-    dispatch(modalHandler());
-    toast.success('Use "2-4-5-6-7-8" for the OTP.', {
-      className:
-        'border border-teal-500 bg-teal-50 text-sm px-1  rounded-lg mx-[4rem] my-[2rem] sm:mx-0',
-      hideProgressBar: true,
-      closeButton: false,
-    });
   };
 
   const handleChange = (e) => {

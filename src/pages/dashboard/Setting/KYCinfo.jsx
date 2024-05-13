@@ -32,7 +32,7 @@ const KYCinfo = () => {
       }
     };
 
-    // Call the function initially and add event listener for window resize
+    // Call the function initially and add event listener for window resize'
     updateWidths();
     // window.addEventListener('resize', updateWidths);
 

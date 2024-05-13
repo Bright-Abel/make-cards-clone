@@ -1,9 +1,13 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import Input from '../DashboardComponent/Input';
 import FundSlide from '../DashboardComponent/FundSlide';
 import { Link } from 'react-router-dom';
+import { clearState } from '../features/register';
+
 const FundCardForm = ({ viewID }) => {
   const { nickname } = useSelector((store) => store.contState);
+
+  const dispatch = useDispatch();
   return (
     <div className="relative flex items-center justify-center w-full gap-4 py-10 px-5">
       <div
@@ -119,6 +123,7 @@ const FundCardForm = ({ viewID }) => {
             <FundSlide />
             <Link
               to="/dashboard"
+              onClick={() => dispatch(clearState())}
               className="!w-full bg-teal-600 text-sm mt-8 font-bold text-teal-50 py-4 sm:py-3 px-20 rounded-[32px] grid place-content-center whitespace-nowrap"
             >
               Skip and continue to dashboard

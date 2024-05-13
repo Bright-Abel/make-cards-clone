@@ -15,9 +15,15 @@ const register = createSlice({
   name: 'cont',
   initialState,
   reducers: {
+    clearState: (state) => {
+      return initialState;
+    },
     changeView: (state, { payload }) => {
       state.viewID = payload;
-      state.arrayID = [...state.arrayID, payload];
+
+      if (!state.arrayID.includes(payload)) {
+        state.arrayID = [...state.arrayID, payload];
+      }
       // let dataToRemove =
     },
     modalHandler: (state) => {
@@ -55,5 +61,6 @@ export const {
   handleUserInput,
   handleVerificationID,
   removeDataFromArray,
+  clearState,
 } = register.actions;
 export default register.reducer;

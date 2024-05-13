@@ -26,6 +26,10 @@ const contSlice = createSlice({
   name: 'cont',
   initialState,
   reducers: {
+    clearState: (state) => {
+      // localStorage.setItem('cart', JSON.stringify(initialState));
+      return initialState;
+    },
     loginCont: (state, { payload }) => {
       state.isLogin = payload;
     },
