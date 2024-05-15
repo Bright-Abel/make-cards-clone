@@ -66,7 +66,12 @@ const Dashboard = () => {
             <Cards />
           </div>
 
-          <PaymentInfo />
+          <div className="mb-[3rem]">
+            <p className="text-[#65696b] font-bold text-[1rem] mb-[0.5rem]">
+              Recent Transactions
+            </p>
+            <PaymentInfo />
+          </div>
         </section>
       </div>
     </Wrapper>
