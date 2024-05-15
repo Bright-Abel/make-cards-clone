@@ -23,7 +23,7 @@ const TableComp = () => {
     {
       title: 'MERCHANT',
       dataIndex: 'merchant',
-      // width: 290,
+      width: 200,
       render: (text, record) => (
         <div
           style={{
@@ -40,7 +40,7 @@ const TableComp = () => {
     {
       title: 'DATE',
       dataIndex: 'timeStamp',
-      // width: 200,
+      // width: 250,
       sorter: {
         compare: (a, b) => {
           const numA = parseFloat(a.timeStamp.replace(/[^\d.]/g, ''));
@@ -52,7 +52,7 @@ const TableComp = () => {
     {
       title: 'AMOUNT (NGN)',
       dataIndex: 'amountInNaira',
-      // width: 170,
+      // width: 160,
       sorter: {
         compare: (a, b) => {
           const numA = parseFloat(a.amountInNaira.replace(/[^\d.]/g, ''));
@@ -64,7 +64,7 @@ const TableComp = () => {
     {
       title: '',
       dataIndex: 'logo',
-      width: 50,
+      // width: 50,
     },
   ];
 

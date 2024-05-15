@@ -104,7 +104,7 @@ const PaymentDataDisplay = () => {
             {/* 7 */}
             <div className="text-sm flex justify-between items-center">
               <h1 className="text-gray-500 ">Merchant</h1>
-              <p className=" font-extrabold">{merchant}</p>
+              <p className=" font-extrabold">{merchant} Payment</p>
             </div>
 
             {/* 8 */}

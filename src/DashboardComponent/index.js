@@ -16,3 +16,5 @@ export { default as ContactUs } from './ContactUs';
 export { default as BlockCardModal } from './BlockCardModal';
 export { default as FundCardAside } from './FundCardAside';
 export { default as PaymentInfoAside } from './PaymentInfoAside';
+export { default as TableComp } from './TableComp';
+export { default as MobileTable } from './MobileTable';

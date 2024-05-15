@@ -15,6 +15,8 @@ const initialState = {
   viewUpdatedValue: false,
   label: '',
   switchState: false,
+  numOfPages: 1,
+  page: 1,
   securityID: 1,
   aboutMakeCardsID: 1,
   blockCardReason: '',
