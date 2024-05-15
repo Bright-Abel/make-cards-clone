@@ -70,6 +70,10 @@
     @apply fixed bottom-0 top-0 right-0 z-[800] bg-white w-[100%] sm:w-[80%] md:w-[50%] lg:w-[30%] h-lvh px-6 py-6 pt-6 pb-10 translate-x-full ease-in-out duration-[500ms];
   }
 
+  .paymentAside {
+    @apply fixed block bottom-0 top-0 right-0 z-[800] bg-white w-[100%] sm:w-[80%] md:w-[50%] lg:hidden h-lvh px-6 py-6 pt-6 pb-10 translate-x-full ease-in-out duration-[500ms];
+  }
+
   .show-sidebar {
     @apply translate-x-0;
   }

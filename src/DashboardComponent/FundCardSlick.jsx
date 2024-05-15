@@ -7,7 +7,7 @@ const FundCardSlick = () => {
       {countryName.map((country) => {
         const { name, src, rate } = country;
         return (
-          <div className="cont text-sm">
+          <div key={name} className="cont text-sm">
             <img
               src={src}
               alt={name}

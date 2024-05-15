@@ -1,4 +1,6 @@
-export { default as PaymentDisplay } from './PaymentDisplay';
+// export { default as PaymentDisplay } from './PaymentDisplay';
+// export { default as Payment } from './Payment';
+export { default as PaymentInfo } from './PaymentInfo';
 export { default as Cards } from './Cards';
 export { default as Requirement } from './Requirement';
 export { default as CardRequest } from './CardRequest';
@@ -13,3 +15,4 @@ export { default as AboutMakeCards } from './AboutMakeCards';
 export { default as ContactUs } from './ContactUs';
 export { default as BlockCardModal } from './BlockCardModal';
 export { default as FundCardAside } from './FundCardAside';
+export { default as PaymentInfoAside } from './PaymentInfoAside';

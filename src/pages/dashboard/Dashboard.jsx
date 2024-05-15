@@ -4,7 +4,7 @@ import { IoIosArrowRoundForward } from 'react-icons/io';
 import { GoCreditCard } from 'react-icons/go';
 import { GrTransaction } from 'react-icons/gr';
 import { useSelector, useDispatch } from 'react-redux';
-import PaymentDisplay from '../../DashboardComponent/PaymentDisplay';
+import { PaymentInfo } from './../../DashboardComponent';
 import { Cards } from '../../DashboardComponent';
 import { fundCardAsideChange } from '../../features/dashBoardSlice';
 
@@ -66,7 +66,7 @@ const Dashboard = () => {
             <Cards />
           </div>
 
-          <PaymentDisplay />
+          <PaymentInfo />
         </section>
       </div>
     </Wrapper>

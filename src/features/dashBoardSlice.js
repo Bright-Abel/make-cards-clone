@@ -4,6 +4,7 @@ const initialState = {
   isSidebarOpen: false,
   isCredit: true,
   payment: [],
+  paymentInfo: [],
   id: 1,
   displayKYCInfo: false,
   displaySecurity: false,
@@ -19,6 +20,8 @@ const initialState = {
   blockCardReason: '',
   isModalOpen: false,
   fundCardAside: false,
+  paymentInfoAside: false,
+  // paymentID: 1,
 };
 
 const dashBoardSlice = createSlice({
@@ -78,10 +81,21 @@ const dashBoardSlice = createSlice({
     fundCardAsideChange: (state) => {
       state.fundCardAside = !state.fundCardAside;
     },
+    paymentInfoDisplay: (state, { payload }) => {
+      state.paymentInfo = payload;
+    },
+    paymentInfoSideBar: (state) => {
+      state.paymentInfoAside = !state.paymentInfoAside;
+    },
+    // changePaymentId: (state, { payload }) => {
+    //   state.paymentID = payload;
+    // },
   },
 });
 
 export const {
+  // changePaymentId,
+  paymentInfoDisplay,
   sideBar,
   changeToCredit,
   changeToDebit,
@@ -98,6 +112,7 @@ export const {
   switchStateChange,
   openModal,
   fundCardAsideChange,
+  paymentInfoSideBar,
 } = dashBoardSlice.actions;
 
 export default dashBoardSlice.reducer;

@@ -19,7 +19,7 @@ const SmallScreenSideBar = () => {
       // }}
       className={
         isSidebarOpen
-          ? 'modal fixed top-0 left-0 w-full h-full ease-in-out duration-1000 bg-[rgba(18,27,25,0.63)] z-[500] xl:hidden'
+          ? 'modal fixed top-0 left-0 w-full h-full block ease-in-out duration-1000 bg-[rgba(18,27,25,0.63)] z-[500] xl:hidden'
           : ''
       }
     >

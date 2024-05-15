@@ -30,7 +30,7 @@ const Pin = () => {
   };
 
   return (
-    <div className="flex flex-col justify-between min-h-screen xl:!py-[5rem]">
+    <div className="flex flex-col justify-between min-h-screen ">
       <Navbar />
       {/* <img
         src="	https://makecards.co/static/media/bg.5d37529d9c1911edd3df9b274733cd95.svg"

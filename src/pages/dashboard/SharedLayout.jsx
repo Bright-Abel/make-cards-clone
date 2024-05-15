@@ -3,7 +3,7 @@ import { toast } from 'react-toastify';
 import { DashboardNav, SideBar, SmallScreenSideBar } from '../../components';
 import { Outlet } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { FundCardAside } from '../../DashboardComponent';
+import { FundCardAside, PaymentInfoAside } from '../../DashboardComponent';
 import { redirect } from 'react-router-dom';
 
 // export const loader = (store) => () => {
@@ -46,6 +46,7 @@ const SharedLayout = () => {
         </div>
       </div>
       <FundCardAside />
+      <PaymentInfoAside />
     </Wrapper>
   );
 };
