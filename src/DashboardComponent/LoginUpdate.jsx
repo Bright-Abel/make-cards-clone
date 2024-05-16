@@ -40,7 +40,7 @@ const LoginUpdate = () => {
     } else {
       toast.success('PIN is successfully updated.', {
         className:
-          'border border-red-300 bg-red-50 text-sm px-1 rounded-lg mx-[4rem] my-[2rem] sm:mx-0',
+          'border border-red-300 bg-teal-50 text-sm px-1 font-bold rounded-lg mx-[4rem] my-[2rem] sm:mx-0',
         hideProgressBar: true,
         closeButton: false,
       });
