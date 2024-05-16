@@ -21,7 +21,6 @@ import {
   Card,
   Transactions,
   SharedLayout,
-  Settings,
   PhysicalCard,
 } from './pages/dashboard';
 
