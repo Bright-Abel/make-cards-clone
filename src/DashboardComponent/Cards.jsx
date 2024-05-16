@@ -67,7 +67,7 @@ const Cards = () => {
               Request physical dollar card
             </p>
             <div className="text-sm text-white bg-teal-500 bg-opacity-80 py-1 px-3 w-28 rounded-3xl hover:!scale-110 !duration-[500ms] cursor-pointer grid place-items-center">
-              <Link to="">Request</Link>
+              <Link to="physical-card">Request</Link>
             </div>
           </div>
         </div>

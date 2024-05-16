@@ -10,7 +10,7 @@ const Transactions = () => {
     <div className="px-8 py-4">
       {/* <TableComp /> */}
       <TransactionTable />
-      <MobileTable payment={paymentData} />
+      <MobileTable payment={paymentData} infoPerPage={7} />
     </div>
   );
 };

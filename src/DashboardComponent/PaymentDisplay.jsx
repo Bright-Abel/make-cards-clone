@@ -50,7 +50,7 @@ const PaymentDisplay = () => {
           </button>
         </Wrapper>
 
-        <MobileTable payment={payment} />
+        <MobileTable payment={payment} infoPerPage={4} />
         <TableComp />
       </div>
     </div>
