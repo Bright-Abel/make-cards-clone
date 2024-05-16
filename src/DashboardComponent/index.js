@@ -18,3 +18,4 @@ export { default as FundCardAside } from './FundCardAside';
 export { default as PaymentInfoAside } from './PaymentInfoAside';
 export { default as TableComp } from './TableComp';
 export { default as MobileTable } from './MobileTable';
+export { default as TransactionTable } from './TransactionTable';

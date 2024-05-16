@@ -6,8 +6,9 @@ import {
   paymentInfoSideBar,
 } from '../features/dashBoardSlice';
 import { paymentData } from '../custom.jsx/data';
-const MobileTable = () => {
-  const { payment } = useSelector((store) => store.dashSlice);
+
+const MobileTable = ({ payment }) => {
+  // const { payment } = useSelector((store) => store.dashSlice);
   const dispatch = useDispatch();
 
   const handleClick = (id) => {
@@ -16,7 +17,7 @@ const MobileTable = () => {
     dispatch(paymentInfoSideBar());
   };
   return (
-    <div className="px-4 block md:hidden">
+    <div className="px-4 block md:hidden bg-white rounded-lg">
       {payment.map((item) => {
         const { merchant, id, timeStamp, amountInNaira, status } = item;
 

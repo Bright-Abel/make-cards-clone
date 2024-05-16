@@ -52,7 +52,7 @@ const TableComp = () => {
     {
       title: 'AMOUNT (NGN)',
       dataIndex: 'amountInNaira',
-      // width: 160,
+      width: 160,
       sorter: {
         compare: (a, b) => {
           const numA = parseFloat(a.amountInNaira.replace(/[^\d.]/g, ''));
