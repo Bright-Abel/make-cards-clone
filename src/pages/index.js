@@ -12,3 +12,5 @@ export { default as PrivacyPolicy } from './PrivacyPolicy';
 export { default as CookiePolicy } from './CookiePolicy';
 export { default as TermsOfService } from './TermsOfService';
 export { default as Register } from './Register';
+export { default as Error } from './Error';
+export { default as HomeError } from './HomeError';

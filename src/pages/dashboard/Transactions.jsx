@@ -1,8 +1,4 @@
-import {
-  TableComp,
-  MobileTable,
-  TransactionTable,
-} from '../../DashboardComponent';
+import { MobileTable, TransactionTable } from '../../DashboardComponent';
 import { paymentData } from '../../custom.jsx/data';
 
 const Transactions = () => {

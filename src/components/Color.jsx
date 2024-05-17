@@ -1,18 +1,11 @@
 import { useSelector } from 'react-redux';
 import styled from 'styled-components';
-import front from '../assets/frontCard.svg';
-import back from '../assets/back.svg';
+
 const Color = () => {
   const { nickname, color, isCardFront } = useSelector(
     (store) => store.contState
   );
 
-  const cardBgColor =
-    color === '#15803d'
-      ? '#052e16'
-      : color === '#1e40af'
-      ? '#172554'
-      : '#020617';
   return (
     <Wrapper>
       <section className=" flip-card">

@@ -7,6 +7,7 @@ import {
   Faqs,
   Login,
   Business,
+  Error,
   Pin,
   ResetPin,
   ForgotPin,
@@ -14,6 +15,7 @@ import {
   PrivacyPolicy,
   CookiePolicy,
   Register,
+  HomeError,
 } from './pages';
 
 import {
@@ -41,7 +43,7 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <HomePage />,
-    // errorElement: <Error />,
+    errorElement: <HomeError />,
     children: [
       {
         index: true,
@@ -106,6 +108,7 @@ const router = createBrowserRouter([
     path: '/dashboard',
     element: <SharedLayout />,
     // loader: dashboardLoader(store),
+    errorElement: <Error />,
     children: [
       {
         index: true,
@@ -127,6 +130,7 @@ const router = createBrowserRouter([
       {
         path: 'settings',
         element: <HomeLayout />,
+        errorElement: <Error />,
         children: [
           {
             index: true,
