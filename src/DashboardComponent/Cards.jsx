@@ -1,6 +1,31 @@
+import { useEffect } from 'react';
 import { IoIosArrowForward } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 const Cards = () => {
+  useEffect(
+    () => async () => {
+      const url =
+        'https://jumia-service.p.rapidapi.com/api/products/samsung-galaxy-a12-blanc-4gb-ram-128gb-6.5-hd-5000mah-blanc-45397926/reviews';
+      const options = {
+        method: 'GET',
+        headers: {
+          'X-RapidAPI-Key':
+            '06da49f710msh123bd3f5cab4e11p153eaejsn3b7df5a544f6',
+          'X-RapidAPI-Host': 'jumia-service.p.rapidapi.com',
+        },
+      };
+
+      try {
+        const response = await fetch(url, options);
+        const result = await response.text();
+        console.log(result);
+        console.log('i am a boy');
+      } catch (error) {
+        console.error(error);
+      }
+    },
+    []
+  );
   return (
     <div className="grid gap-6 grid-cols-1 lg:grid-cols-3">
       <div className="relative">

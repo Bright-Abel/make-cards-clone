@@ -4,6 +4,7 @@ import { handleColor } from '../features/contSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import { toast } from 'react-toastify';
 
 import { Footer, FormSelectInput, Navbar } from '../components';
 import { motion } from 'framer-motion';
@@ -42,35 +43,16 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (
-      countryName === 'NG' &&
-      !phoneNumber.match(/^(\+?234|0)([789][01]\d{8}|[579]\d{8})$/)
-    ) {
-      setErrorMsg('Incorrect phone number');
-    } else if (
-      countryName === 'KE' &&
-      !phoneNumber.match(/^(\+?254|0)([7][0-9]\d{7})$/)
-    ) {
-      setErrorMsg('Incorrect phone number');
-    } else if (
-      countryName === 'UG' &&
-      !phoneNumber.match(/^(\+?256|0)(\d{9})$/)
-    ) {
-      setErrorMsg('Incorrect phone number');
-    } else if (
-      countryName === 'GH' &&
-      !phoneNumber.match(/^(\+?233|0)(\d{9})$/)
-    ) {
-      setErrorMsg('Incorrect phone number');
-    } else if (
-      countryName === 'ZA' &&
-      !phoneNumber.match(/^(\+?27|0)(\d{9})$/)
-    ) {
-      setErrorMsg('Incorrect phone number');
+    if (phoneNumber.length < 10 || phoneNumber.length < 11) {
+      toast.error('Phone Number is too short.', {
+        className:
+          'border border-red-300 bg-red-50 text-sm px-1  rounded-lg mx-[4rem] my-[2rem] sm:mx-0',
+        hideProgressBar: true,
+        closeButton: false,
+      });
     } else {
-      setErrorMsg('');
+      navigate('/pin');
     }
-    navigate('/pin');
   };
 
   const handleChange = (e) => {

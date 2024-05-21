@@ -1,6 +1,7 @@
 import Select from 'react-select';
 import { useState } from 'react';
 import styled from 'styled-components';
+import zIndex from '@mui/material/styles/zIndex';
 
 const FundCardSelect = ({ arr, name, defaultVal, placeHolder }) => {
   const [selectedOption, setSelectedOption] = useState(null);
@@ -13,6 +14,8 @@ const FundCardSelect = ({ arr, name, defaultVal, placeHolder }) => {
     }),
     menu: (base, state) => ({
       ...base,
+      zIndex: '1000',
+      // Transition: 'all 2s linear',
     }),
 
     option: (base, state) => ({

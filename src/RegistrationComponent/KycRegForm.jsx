@@ -31,7 +31,14 @@ const KycRegForm = ({ isModalOpen, viewID }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (OTP.length === 6) {
+    if (phoneNumber.length < 10 || phoneNumber.length < 11) {
+      toast.error('Phone Number is too short.', {
+        className:
+          'border border-red-300 bg-red-50 text-sm px-1  rounded-lg mx-[4rem] my-[2rem] sm:mx-0',
+        hideProgressBar: true,
+        closeButton: false,
+      });
+    } else if (OTP.length === 6) {
       dispatch(changeView(2));
     } else {
       dispatch(modalHandler());
