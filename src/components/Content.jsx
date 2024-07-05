@@ -61,7 +61,8 @@ const Content = () => {
         data-aos-delay="1200"
       >
         Spend anytime, anywhere, with your
-        <span className="bg-teal-500 px-2 py-1 rounded  capitalize font-semibold text-white mx-[.4rem]">
+        <br />
+        <span className="bg-teal-500 px-3 py-1 rounded  capitalize font-semibold text-white mr-[.4rem]">
           <TextTransition springConfig={presets.wobbly} inline={true}>
             {TEXTS[index % TEXTS.length]}
           </TextTransition>
